@@ -1,5 +1,7 @@
 # DumbMonitors
 
+<img src="Icon/icon.png" width="128" alt="DumbMonitors icon">
+
 Turn external monitors off and on from your Mac's menu bar or terminal — no unplugging, no paid apps.
 
 "Off" means macOS treats the monitor as disconnected: windows move to your other screens and the monitor goes to standby. "On" brings it back.
@@ -38,6 +40,10 @@ The app lives only in the menu bar (no Dock icon or window). If you don't see it
 ## How it works
 
 It calls `CGSConfigureDisplayEnabled`, a private (undocumented) CoreGraphics function — the same one paid tools use. Because it's not a public Apple API, a future macOS update could break it. Tested on macOS 27 with Apple Silicon.
+
+## Icon
+
+The icon is drawn in code by `Icon/make_icon.swift`. To change it, edit that file and run `swift Icon/make_icon.swift Icon/icon.png`.
 
 ## License
 
